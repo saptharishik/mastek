@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+<style>
+
+</style>
+</head>
+<body style="background-image: url('{{ url_for('static', filename='loginbg.jpg') }}');" class="bg-center bg-cover h-screen overflow-hidden">
+<div style="padding-top: 400px;">
+
+    <form action="/login" method="POST" class="p-10 bg-opacity-75 bg-white flex flex-col space-y-5 rounded-xl m-5" >
+      {% if error %}
+      <p class="text-red-600 text-center">{{error}}</p>
+      {% endif %}
+      <div class="flex justify-center items-center flex-col ">
+        <label class="pr-1 text-lg" for="username">USERNAME: </label>
+        <input type="text" name="username" id="username" class="px-4 py-2 rounded-2xl outline-none">
+      </div>
+      <div class="flex justify-center items-center flex-col ">
+        <label class="pr-1 text-lg" for="password">PASSWORD: </label>
+        <input type="password" name="password" id="password" class="px-4 py-2 rounded-2xl outline-none">
+      </div>
+      <input type="submit" value="Login" class="bg-green-700 text-white p-2 rounded-xl active:bg-white active:text-green-800 trasition duration-300 ease-in-out">
+    </form>
+  </div>
+</body>
+</html>
