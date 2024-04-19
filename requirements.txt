@@ -1,1 +1,5 @@
 Flask==2.0.1
+ultralytics==8.2.2
+firebase-admin==6.5.0
+opencv-python==4.9.0.80
+qrcode==7.4.2
